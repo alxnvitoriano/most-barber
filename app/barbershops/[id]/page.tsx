@@ -24,7 +24,11 @@ const BarbershopPage = async (props: BarbershopPageProps) => {
       id,
     },
     include: {
-      services: true,
+      services: {
+        include: {
+          barbershop: true,
+        },
+      },
     },
   });
 
